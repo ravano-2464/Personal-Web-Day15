@@ -1,274 +1,455 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.btn-contact,
-.btn-submit {
-    background-color: #f7f7f7;
-    color: #333;
-    padding: 10px;
-    width: 130px;
-    font-size: 16px;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    border: 2px solid #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
+html {
+  font-size: 62.5%;
 }
 
-
-.btn-contact:hover,
-.btn-submit:hover {
-    background-color: #333;
-    color: #fff;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.nav-link {
-    font-size: 20px;
+/* NAVBAR */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f3f3;
+  height: 8rem;
+  padding: 2rem;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
 }
 
-.nav-link a {
-    color: #333;
-    text-decoration: none;
+.nav-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  background-color: #111727;
+  color: #fff;
+  border-radius: 5rem;
+  border: none;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
-.nav-link a:hover {
-    color: orangered;
+.nav-btn:hover {
+  color: #111727;
+  background-color: #f4f3f3;
+  box-shadow: inset 0 0 0 2px #111727;
 }
 
-.Blog-form {
-    padding: 50px 0;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4rem;
+}
+
+.main-nav-link {
+  font-size: 2rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.logo {
+  width: 6rem;
+}
+
+/* ADD MY PROJECT */
+
+.add-project {
+  background-color: white;
+  padding: 4.8rem 0 4.8rem 0;
+}
+
+.container {
+  max-width: 120rem;
+  /* padding: 0 4.8rem; */
+  margin: 0 auto;
+  width: 50% !important;
+}
+
+.add-project-box {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-heading {
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.input-label {
+  font-size: 2rem;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.project-form input,
+.project-form textarea {
+  font-size: 1.5rem !important;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: none;
+  width: 100%;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.form-check-input {
+  margin-left: -1rem !important;
+}
+
+.project-form textarea {
+  resize: none;
+  height: 15rem;
+}
+
+.date-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.date-box input {
+  width: 100%;
+}
+
+.checkbox-container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  gap: 2rem;
+}
+
+.checkbox-container input {
+  appearance: none;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* input[type="checkbox"]::after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  font-weight: 700;
+  font-size: 3rem;
+  display: none;
+} */
+
+input[type="checkbox"]:checked:after {
+  display: block;
+}
+
+.checkbox-container div {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-title {
+  font-size: 2rem;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.checkbox-label {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.file-upload input {
+  outline: none;
+  padding: 0;
+  color: transparent;
+}
+
+::-webkit-file-upload-button {
+  color: #fff;
+  background-color: #111727;
+  border: none;
+  padding: 1rem;
+  outline: none;
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+::-webkit-file-upload-button:hover {
+  color: #111727;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 2px #111727;
+}
+
+.upload-img {
+  font-size: 2rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  background-color: #111727;
+  color: #fff;
+  border-radius: 5rem;
+  border: none;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  color: #111727;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 2px #111727;
+}
+
+.btn-container {
+  text-align: right;
+}
+
+/* LIST MY PROJECT */
+
+.container-list {
+  max-width: 120rem;
+  /* padding: 0 4.8rem; */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.list-project {
+  background-color: #fff;
+  padding: 4.8rem 0 4.8rem 0;
+  position: relative;
+}
+
+.list-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin: 0 4rem;
+}
+
+.list-project-title {
+  font-size: 2rem;
+  margin-top: 1.3rem;
+}
+
+.list-project-duration {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #514a4a;
+}
+
+.list-project-description {
+  font-size: 1.5rem;
+  /* padding-right: 3rem; */
+  margin-top: 2rem;
+  font-weight: 500;
+  width: 30rem;
+  word-wrap: break-word;
+}
+
+.box {
+  padding: 2rem;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-1.2rem);
+}
+
+.list-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.list-icon {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 2rem 0;
+}
+
+.list-icon i {
+  font-size: 3rem;
+}
+
+.button-box {
+  display: flex;
+  gap: 2rem;
+}
+
+.list-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.7rem 2rem;
+  font-size: 1.8rem;
+  background-color: #111727;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.list-btn:hover {
+  color: #000;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 2px #111727;
+}
+
+.nav-icon-mobile {
+  font-size: 4rem;
+  display: none;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #514a4a;
+}
+
+.span-item {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .list-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* NAV */
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-icon-mobile {
+    display: block;
+  }
+
+  .main-nav {
     display: flex;
     justify-content: center;
-}
-
-.Blog-form .form-container {
-    width: 80%;
-    max-width: 600px;
-}
-
-.Blog-form .form-container h1 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.Blog-form form label {
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.Blog-form form input,
-.Blog-form form textarea,
-.Blog-form form select,
-.Blog-form form .input-Blog-image-group {
+    align-items: center;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    right: 0;
     width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    background: #f7f7f7;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
+    height: 20rem;
+    background-color: rgb(237, 233, 224);
+    transition: all 0.4s;
 
-.Blog-form form textarea {
-    height: 150px;
-}
+    /* hide navigation */
 
-.Blog-form form .input-Blog-image-group label p {
-    font-size: 14px;
-}
+    /* 1) hide it visually */
+    opacity: 0;
 
-.Blog-form form .input-Blog-image-group label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    /* 2) make it unaccessible to mouse and keyboard */
+    pointer-events: none;
 
-.Blog-form form .button-group {
-    text-align: right;
-}
+    /* 3) hide it from screen readers */
+    visibility: hidden;
+  }
 
-.Blog-form form button {
-    margin-top: 20px;
-    padding: 8px 20px;
-    font-size: 16px;
-    background: #333;
-    border-radius: 8px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+  .active-mobile.main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
 
-.Blog-form form button:hover {
-    background-color: #f7f7f7;
-    color: #333;
-}
-
-.Blog hr {
-    border: 1px solid #ddd;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.Blog .Blog-list {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
+  .main-nav-list {
     flex-direction: column;
+    gap: 3rem;
+  }
+
+  .list-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box {
+    margin: 0 5rem;
+  }
+
+  .container {
+    max-width: 120rem;
+    /* padding: 0 4.8rem; */
+    margin: 0 auto;
+    width: 75% !important;
+  }
 }
 
-.Blog .Blog-list .Blog-list-item {
-    width: 80%;
-    max-width: 800px;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-}
+@media only screen and (max-width: 544px) {
+  .date-box {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 
-.Blog .Blog-list .Blog-list-item .Blog-image {
-    flex: 1;
-}
+  .project-form {
+    padding: 2rem;
+  }
 
-.Blog .Blog-list .Blog-list-item .Blog-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-}
+  .project-heading {
+    font-size: 3.5rem;
+  }
 
-.Blog .Blog-list .Blog-list-item .Blog-content {
-    padding-left: 20px;
-    flex: 2;
-}
+  .list-box {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+    padding: 2rem;
+  }
 
-.Blog .Blog-list .btn-group {
-    text-align: right;
-    margin-bottom: 20px;
-}
-
-.Blog .Blog-list .btn-group .btn-edit,
-.Blog .Blog-list .btn-group .btn-post {
-    padding: 5px 10px;
-    border: 0;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.Blog .Blog-list .btn-group .btn-edit {
-    background: #f7f7f7;
-}
-
-.Blog .Blog-list .btn-group .btn-post {
-    background: #333;
-    color: #fff;
-}
-
-.Blog .Blog-list .btn-group .btn-edit:hover,
-.Blog .Blog-list .btn-group .btn-post:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-.Blog .Blog-list h1 a {
-    text-decoration: none;
-    color: #000;
-}
-
-.Blog .Blog-list .detail-Blog-content {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.Blog .Blog-list .Blog-list-item p {
-    margin-top: 20px;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: justify;
-}
-
-.Blog-detail {
-    display: flex;
-    justify-content: center;
-}
-
-.Blog-detail-container {
-    width: 80%;
-    max-width: 800px;
-    margin: 40px 0;
-}
-
-.Blog-detail-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.Blog-detail-container h1 {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 120%;
-    margin-bottom: 15px;
-}
-
-.Blog-detail-container .author {
-    font-weight: 100;
-    font-size: 18px;
-    line-height: 120%;
-    margin-bottom: 20px;
-}
-
-.Blog-detail-container p {
-    margin-top: 40px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 140%;
-    text-align: justify;
-}
-
-.text-checkbox {
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-}
-
-.checkbox {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
-}
-
-.checkbox-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    flex-basis: 50%; 
-}
-
-.checkbox input {
-    margin-right: 8px;
-}
-
-
-.button-group {
-    text-align: center;
+  .box {
+    margin: 0;
+  }
 }
