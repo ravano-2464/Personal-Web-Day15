@@ -114,7 +114,7 @@ async function handleLogin(req, res) {
     );
 
     if (!checkEmail.length) {
-      req.flash("failed", "Your Email Is Not Register!!!");
+      req.flash("failed", "❌ You Must Register Your Email And Password At Register Form!!!");
       return res.redirect("/login");
     }
 
